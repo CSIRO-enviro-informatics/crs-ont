@@ -1,5 +1,4 @@
-# crs-ont
-Commonwealth Record Series system ontology.
+# Commonwealth Record Series system ontology
 
 This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
