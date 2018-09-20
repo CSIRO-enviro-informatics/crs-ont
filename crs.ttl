@@ -5,50 +5,61 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://linked.data.gov.au/def/crs> .
+@prefix org: <http://www.w3.org/ns/org#> .
 
 <http://linked.data.gov.au/def/crs> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://linked.data.gov.au/def/crs/1.0> .
+                                     owl:versionIRI <http://linked.data.gov.au/def/crs/1.0> ;
+                                     <http://purl.org/dc/elements/1.1/contributor> "David Hearder" ;
+                                     <http://purl.org/dc/elements/1.1/creator> "Nicholas J. Car" ;
+                                     rdfs:label "AU Org Ontology"@en ;
+                                     <http://purl.org/dc/terms/publisher> <http://www.csiro.au> ;
+                                     <http://purl.org/dc/terms/created> "2018-09-10"^^xsd:date ;
+                                     <http://purl.org/dc/elements/1.1/publisher> "CSIRO" ;
+                                     <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-3884-3420> ;
+                                     <http://purl.org/dc/elements/1.1/contributor> "Marco Wallenius" ;
+                                     owl:versionInfo "Beta version"@en ;
+                                     <http://purl.org/dc/terms/creator> <http://orcid.org/0000-0002-8742-7730> ;
+                                     rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) that is maintained by the [National Archives of Australia](http://naa.gov.au).
+
+This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/).
+
+It also reuses many components from the following Australian government ontologies:
+
+* [Au Org Ontology](https://github.com/CSIRO-enviro-informatics/auorg-ont) - Australian government structures
+* [AGRIF](http://reference.data.gov.au/def/ont/agrif) - Australian government Functions & Records""" ;
+                                     <http://purl.org/dc/elements/1.1/contributor> "Simon J.D. Cox" ;
+                                     rdfs:seeAlso "The GitHub repository containing addition documentation: http://github.com/CSIRO-enviro-informatics/auorg-ont/"@en ;
+                                     <http://purl.org/dc/terms/modified> "2018-09-20"^^xsd:date .
 
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://linked.data.gov.au/def/crs#mandatedBy
-:mandatedBy rdf:type owl:ObjectProperty ;
-            rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
-            rdfs:range :Authority .
+:mandatedBy rdf:type owl:ObjectProperty .
 
 
 ###  http://linked.data.gov.au/def/crs#performs
 :performs rdf:type owl:ObjectProperty ;
-          rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
           rdfs:range <http://reference.data.gov.au/def/ont/agrif#Function> .
 
 
 ###  http://linked.data.gov.au/def/crs#previousAgency
 :previousAgency rdf:type owl:ObjectProperty ;
-                owl:inverseOf :subsequentAgency ;
-                rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                rdfs:range <http://test.linked.data.gov.au/def/auorg#Entity> .
+                owl:inverseOf :subsequentAgency .
 
 
 ###  http://linked.data.gov.au/def/crs#subordinateAgency
 :subordinateAgency rdf:type owl:ObjectProperty ;
-                   owl:inverseOf :superiorAgency ;
-                   rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                   rdfs:range <http://test.linked.data.gov.au/def/auorg#Entity> .
+                   owl:inverseOf :superiorAgency .
 
 
 ###  http://linked.data.gov.au/def/crs#subsequentAgency
-:subsequentAgency rdf:type owl:ObjectProperty ;
-                  rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                  rdfs:range <http://test.linked.data.gov.au/def/auorg#Entity> .
+:subsequentAgency rdf:type owl:ObjectProperty .
 
 
 ###  http://linked.data.gov.au/def/crs#superiorAgency
-:superiorAgency rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                rdfs:range <http://test.linked.data.gov.au/def/auorg#Entity> .
+:superiorAgency rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -69,49 +80,21 @@
 #    Classes
 #################################################################
 
-###  http://linked.data.gov.au/def/crs#AbolitionEvent
-:AbolitionEvent rdf:type owl:Class ;
-                rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
+###  http://linked.data.gov.au/def/crs#Agency
+:Agency rdf:type owl:Class .
 
 
-###  http://linked.data.gov.au/def/crs#AdministrativeArrangementOrder
-:AdministrativeArrangementOrder rdf:type owl:Class ;
-                                rdfs:isDefinedBy <http://test.linked.data.gov.au/def/crs> ;
-                                rdfs:label "Administrative Arrangement Order"@en .
-
-
-###  http://linked.data.gov.au/def/crs#Authority
-:Authority rdf:type owl:Class ;
-           rdfs:comment "An authority or rule that define the functions and activities of a Government Entity"@en ;
-           rdfs:isDefinedBy <http://test.linked.data.gov.au/def/crs> ;
-           rdfs:label <http://linked.data.gov.au/def/Authority> .
-
-
-###  http://linked.data.gov.au/def/crs#CreationEvent
-:CreationEvent rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
-
-
-###  http://linked.data.gov.au/def/crs#Function
-:Function rdf:type owl:Class ;
-          rdfs:comment "A major function normally undertaken by an agency in its operations"@en ;
-          rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-          rdfs:label "Government Function"@en .
+###  http://linked.data.gov.au/def/crs#CommonwealthPerson
+:CommonwealthPerson rdf:type owl:Class ;
+                    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
 ###  http://linked.data.gov.au/def/crs#Item
 :Item rdf:type owl:Class .
 
 
-###  http://linked.data.gov.au/def/crs#ModificationEvent
-:ModificationEvent rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/org#ChangeEvent> .
-
-
-###  http://linked.data.gov.au/def/crs#Person
-:Person rdf:type owl:Class ;
-        rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
-        rdfs:isDefinedBy <http://test.linked.data.gov.au/def/crs> .
+###  http://linked.data.gov.au/def/crs#Organisation
+:Organisation rdf:type owl:Class ; rdfs:subClassOf org:Organization .
 
 
 ###  http://linked.data.gov.au/def/crs#Series
@@ -138,44 +121,6 @@
                                                                       rdfs:subClassOf <http://reference.data.gov.au/def/ont/agrif#Function> ;
                                                                       rdfs:isDefinedBy <http://reference.data.gov.au/def/ont/agrif> ;
                                                                       rdfs:label "Records Authority Function"^^xsd:string .
-
-
-###  http://test.linked.data.gov.au/def/auorg#Agency
-<http://test.linked.data.gov.au/def/auorg#Agency> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                                                  rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-                                                  rdfs:label "Government Agency"@en .
-
-
-###  http://test.linked.data.gov.au/def/auorg#Department
-<http://test.linked.data.gov.au/def/auorg#Department> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                                                      rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-                                                      rdfs:label "Government Department"@en .
-
-
-###  http://test.linked.data.gov.au/def/auorg#Entity
-<http://test.linked.data.gov.au/def/auorg#Entity> rdf:type owl:Class ;
-                                                  rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-                                                  rdfs:label "Government Entity"@en .
-
-
-###  http://test.linked.data.gov.au/def/auorg#Jurisdiction
-<http://test.linked.data.gov.au/def/auorg#Jurisdiction> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://test.linked.data.gov.au/def/auorg#Entity> ;
-                                                        rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-                                                        rdfs:label "Government or Jurisdiction"@en .
-
-
-###  http://test.linked.data.gov.au/def/auorg#Portfolio
-<http://test.linked.data.gov.au/def/auorg#Portfolio> rdf:type owl:Class ;
-                                                     rdfs:subClassOf :Function ;
-                                                     rdfs:isDefinedBy <http://test.linked.data.gov.au/def/auorg> ;
-                                                     rdfs:label "Government Portfolio"@en .
-
-
-###  http://www.w3.org/ns/org#ChangeEvent
-<http://www.w3.org/ns/org#ChangeEvent> rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
