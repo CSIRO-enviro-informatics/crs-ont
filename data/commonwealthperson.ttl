@@ -1,0 +1,157 @@
+@prefix : <http://test.linked.data.gov.au/def/crs#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix schema: <https://schema.org/> .
+@base <http://test.linked.data.gov.au/def/crs> .
+
+'''
+  25 Oct 1969 - 23 Apr 1996
+  CA 692, Department of the House of Representatives - Member for Blaxland (NSW)
+  25 Sep 1974 - 30 Sep 1975
+  CA 1963, [Parliamentary] Joint Committee on Pecuniary Interests of Members of Parliament - Member
+  30 Sep 1975 - 04 Feb 1983
+  CA 3590, Joint Standing Committee on the New and Permanent Parliament House - Member
+  21 Oct 1975 - 11 Nov 1975
+  CA 1889, Department of Northern Australia, Central Office - Minister
+  18 Mar 1976 - 04 Feb 1983
+  CA 8251, Joint Committee on the New Parliament House - Member
+  11 Mar 1983 - 03 Jun 1991
+  CA 2141, Department of the Treasury [II], Central Office - Treasurer
+  04 Apr 1990 - 03 Jun 1991
+  CA 1401, Department of the Prime Minister and Cabinet - Deputy Prime Minister and Minister Assisting the Prime Minister for Commonwealth-State Relations
+  20 Dec 1991 - 11 Mar 1996
+  CA 1401, Department of the Prime Minister and Cabinet - Prime Minister
+'''
+<http://test.linked.data.gov.au/dataset/crs/CommonwealthPerson/CP665> a owl:NamedIndividual ;
+  foaf:familyName "Keating" ;
+  foaf:givenName "Paul John" ;
+  schema:birthDate "1944-01-18"^^xsd:date ;
+  skos:prefLabel "Hon Paul Keating" ;
+  foaf:publications (
+    _:book
+    )
+  dct:dateAccepted "1996-03-06"^^xsd:date ;
+
+  :associatedWith [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA692> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate "1969-10-25"^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate "1996-04-23"^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA1963> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate "1974-09-24"^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate "1975-09-30"^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] ,
+  [
+    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/> ;
+    time:hasTime [
+      a time:ProperInterval ;
+      time:hasBeginning [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+      time:hasEnd [
+        time:inTimePosition [
+          time:inXSDDate ""^^xsd:date
+      ] ;
+    ] ;
+  ] .
+
+_:book a foaf:Document ;
+  dct:title "Australia faces the Asia-Pacific"
+  dct:creator <http://test.linked.data.gov.au/dataset/crs/CommonwealthPerson/CP665> ;
+  dct:publisher "Macmillan, Sydney" ;
+  dct:date "2000"^^xsd:gYear ;
