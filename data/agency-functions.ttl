@@ -1,0 +1,10 @@
+@prefix : <http://test.linked.data.gov.au/def/crs#> .
+
+
+:Agriculture a :Function .
+:ExportsAndImports a :Function .
+:LandTransport a :Function .
+:ResearchAndDevelopment a :Function .
+:Resources a :Function .
+:SeaTransport a :Function .
+:TerritoryAdministration a :Function .
