@@ -6,6 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://test.linked.data.gov.au/def/crs> .
+@prefix dct:        <http://purl.org/dc/terms/> .
 
 <http://test.linked.data.gov.au/def/crs> rdf:type owl:Ontology ;
                                           owl:versionIRI <http://test.linked.data.gov.au/def/crs#1.0> ;
@@ -32,6 +33,14 @@ It also reuses many components from the following Australian government ontologi
                                           owl:versionInfo "Beta version"@en .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -41,6 +50,20 @@ It also reuses many components from the following Australian government ontologi
                 rdfs:range :Agent ;
                 rdfs:comment "An Agent (Commonwealth Person, Agency, Organisation) is associated with another Agent." ;
                 rdfs:label "associated with" .
+
+
+###  http://linked.data.gov.au/def/crs#hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:domain :Association ;
+          rdfs:range :Agent ;
+          rdfs:comment "Whan an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2."@en ;
+          rdfs:label "has agent" .
+
+
+###  http://linked.data.gov.au/def/crs#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:domain :Association ;
+         rdfs:range :Role .
 
 
 ###  http://linked.data.gov.au/def/crs#mandatedBy
@@ -57,46 +80,44 @@ It also reuses many components from the following Australian government ontologi
 
 ###  http://linked.data.gov.au/def/crs#previousAgency
 :previousAgency rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :relatedAgency ;
+                rdfs:subPropertyOf org:linkedTo ;
                 owl:inverseOf :subsequentAgency .
 
 
 ###  http://linked.data.gov.au/def/crs#subordinateAgency
 :subordinateAgency rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :relatedAgency ;
+                   rdfs:subPropertyOf org:linkedTo ;
                    owl:inverseOf :superiorAgency .
 
 
 ###  http://linked.data.gov.au/def/crs#subsequentAgency
 :subsequentAgency rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :relatedAgency .
+                  rdfs:subPropertyOf org:linkedTo .
 
 
 ###  http://linked.data.gov.au/def/crs#superiorAgency
 :superiorAgency rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :relatedAgency .
+                rdfs:subPropertyOf org:linkedTo .
 
 
-###  http://test.linked.data.gov.au/def/crs#hasAgent
-:hasAgent rdf:type owl:ObjectProperty ;
-          rdfs:domain :Association ;
-          rdfs:range :Agent ;
-          rdfs:comment "Whan an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2."@en ;
-          rdfs:label "has agent" .
+###  http://www.w3.org/ns/org#hasMember
+org:hasMember rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :associatedWith ;
+              owl:inverseOf org:member ;
+              rdfs:label "has member" .
 
 
-###  http://test.linked.data.gov.au/def/crs#hasRole
-:hasRole rdf:type owl:ObjectProperty ;
-         rdfs:domain :Association ;
-         rdfs:range :Role .
+###  http://www.w3.org/ns/org#linkedTo
+org:linkedTo rdf:type owl:ObjectProperty ;
+             rdfs:label "linked to"@en ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "related agent" .
 
 
-###  http://test.linked.data.gov.au/def/crs#relatedAgency
-:relatedAgency rdf:type owl:ObjectProperty ;
-               rdfs:domain :Agency ,
-                           :Organisation ;
-               rdfs:range :Agency ,
-                          :Organisation .
+###  http://www.w3.org/ns/org#member
+org:member rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :associatedWith ;
+           owl:inverseOf org:hasMember ;
+           rdfs:label "member" .
 
 
 #################################################################
@@ -171,6 +192,16 @@ org:identifier rdf:type owl:DatatypeProperty .
                               org:Organization .
 
 
+###  http://linked.data.gov.au/def/crs#Role
+:Role rdf:type owl:Class ;
+      rdfs:comment "The role played by one CRS Agent when associated with another via an Assotiation"@en ;
+      rdfs:label "Role"@en .
+
+ org:Membership a owl:Class ;
+ rdfs:subClassOf :Association ;
+ rdfs:label "Membership" .
+
+
 ###  http://linked.data.gov.au/def/crs#Series
 :Series rdf:type owl:Class ;
         rdfs:isDefinedBy <http://test.linked.data.gov.au/def/crs> .
@@ -189,18 +220,14 @@ org:identifier rdf:type owl:DatatypeProperty .
                                                       rdfs:isDefinedBy <http://reference.data.gov.au/def/ont/agrif> ;
                                                       rdfs:label "Function"^^xsd:string .
 
+                                                      dct:creator rdf:type owl:ObjectProperty ;
+                                                      rdfs:label "creator" ; skos:altLabel "was created by" .
 
 ###  http://reference.data.gov.au/def/ont/agrif#RecordsAuthorityFunction
 <http://reference.data.gov.au/def/ont/agrif#RecordsAuthorityFunction> rdf:type owl:Class ;
                                                                       rdfs:subClassOf <http://reference.data.gov.au/def/ont/agrif#Function> ;
                                                                       rdfs:isDefinedBy <http://reference.data.gov.au/def/ont/agrif> ;
                                                                       rdfs:label "Records Authority Function"^^xsd:string .
-
-
-###  http://test.linked.data.gov.au/def/crs#Role
-:Role rdf:type owl:Class ;
-      rdfs:comment "The role played by one CRS Agent when associated with another via an Assotiation"@en ;
-      rdfs:label "Role"@en .
 
 
 ###  http://www.w3.org/ns/org#Organization
@@ -219,28 +246,28 @@ org:Organization rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://test.linked.data.gov.au/def/crs#AssistantMinister
+###  http://linked.data.gov.au/def/crs#AssistantMinister
 :AssistantMinister rdf:type owl:NamedIndividual ;
                    owl:sameAs :ParliamentarySecretary .
 
 
-###  http://test.linked.data.gov.au/def/crs#DeputyPrimeMinister
+###  http://linked.data.gov.au/def/crs#DeputyPrimeMinister
 :DeputyPrimeMinister rdf:type owl:NamedIndividual .
 
 
-###  http://test.linked.data.gov.au/def/crs#Member
+###  http://linked.data.gov.au/def/crs#Member
 :Member rdf:type owl:NamedIndividual .
 
 
-###  http://test.linked.data.gov.au/def/crs#Minister
+###  http://linked.data.gov.au/def/crs#Minister
 :Minister rdf:type owl:NamedIndividual .
 
 
-###  http://test.linked.data.gov.au/def/crs#ParliamentarySecretary
+###  http://linked.data.gov.au/def/crs#ParliamentarySecretary
 :ParliamentarySecretary rdf:type owl:NamedIndividual .
 
 
-###  http://test.linked.data.gov.au/def/crs#PrimeMinister
+###  http://linked.data.gov.au/def/crs#PrimeMinister
 :PrimeMinister rdf:type owl:NamedIndividual .
 
 

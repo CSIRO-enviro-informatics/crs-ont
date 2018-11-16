@@ -47,10 +47,10 @@ Since leaving federal politics, Keating has held various appointments, including
     dct:date "2000"^^xsd:gYear ;
   ] ;
   dct:dateAccepted "1996-03-06"^^xsd:date ;
-  :associatedWith [
+  :hasAssociation [
   #  25 Oct 1969 - 23 Apr 1996
   #  CA 692, Department of the House of Representatives - Member for Blaxland (NSW)
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA692> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA692> ;
     :hasRole [
       a :Member ;
       rdfs:label "Member for Blaxland (NSW)" ;
@@ -66,7 +66,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA1963> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA1963> ;
     #  25 Sep 1974 - 30 Sep 1975
     #  CA 1963, [Parliamentary] Joint Committee on Pecuniary Interests of Members of Parliament - Member
     :hasRole [
@@ -83,7 +83,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA3590> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA3590> ;
     # 30 Sep 1975 - 04 Feb 1983
     # CA 3590, Joint Standing Committee on the New and Permanent Parliament House - Member
     :hasRole [
@@ -101,7 +101,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA1889> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA1889> ;
     # 21 Oct 1975 - 11 Nov 1975
     # CA 1889, Department of Northern Australia, Central Office - Minister
     :hasRole [
@@ -119,7 +119,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA8251> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA8251> ;
     # 18 Mar 1976 - 04 Feb 1983
     # CA 8251, Joint Committee on the New Parliament House - Member
     :hasRole [
@@ -137,7 +137,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA2141> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA2141> ;
     # 11 Mar 1983 - 03 Jun 1991
     # CA 2141, Department of the Treasury [II], Central Office - Treasurer
     :hasRole [
@@ -155,7 +155,7 @@ Since leaving federal politics, Keating has held various appointments, including
    ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA1401> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA1401> ;
     # 04 Apr 1990 - 03 Jun 1991
     # CA 1401, Department of the Prime Minister and Cabinet - Deputy Prime Minister and Minister Assisting the Prime Minister for Commonwealth-State Relations
     :hasRole [
@@ -177,7 +177,7 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
   ] ,
   [
-    :agency <http://test.linked.data.gov.au/dataset/crs/Agency/CA1401> ;
+    :hasAgent <http://test.linked.data.gov.au/dataset/crs/Agency/CA1401> ;
     # 20 Dec 1991 - 11 Mar 1996
     # CA 1401, Department of the Prime Minister and Cabinet - Prime Minister
     :hasRole [
