@@ -35,25 +35,24 @@ It also reuses many components from the following Australian government ontologi
 #    Object Properties
 #################################################################
 
-###  http://linked.data.gov.au/def/crs#agency
-:agency rdf:type owl:ObjectProperty ;
-        rdfs:range org:Organization .
-
-
 ###  http://linked.data.gov.au/def/crs#associatedWith
 :associatedWith rdf:type owl:ObjectProperty ;
                 rdfs:domain :Agent ;
-                rdfs:range :Agent .
+                rdfs:range :Agent ;
+                rdfs:comment "An Agent (Commonwealth Person, Agency, Organisation) is associated with another Agent." ;
+                rdfs:label "associated with" .
 
 
 ###  http://linked.data.gov.au/def/crs#mandatedBy
 :mandatedBy rdf:type owl:ObjectProperty ;
-            rdfs:range :Authority .
+            rdfs:range :Authority ;
+            rdfs:label "mandated by" .
 
 
 ###  http://linked.data.gov.au/def/crs#performs
 :performs rdf:type owl:ObjectProperty ;
-          rdfs:range <http://reference.data.gov.au/def/ont/agrif#Function> .
+          rdfs:range <http://reference.data.gov.au/def/ont/agrif#Function> ;
+          rdfs:label "performs" .
 
 
 ###  http://linked.data.gov.au/def/crs#previousAgency
@@ -76,6 +75,14 @@ It also reuses many components from the following Australian government ontologi
 ###  http://linked.data.gov.au/def/crs#superiorAgency
 :superiorAgency rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :relatedAgency .
+
+
+###  http://test.linked.data.gov.au/def/crs#hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:domain :Association ;
+          rdfs:range :Agent ;
+          rdfs:comment "Whan an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2."@en ;
+          rdfs:label "has agent" .
 
 
 ###  http://test.linked.data.gov.au/def/crs#hasRole

@@ -58,14 +58,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1969-10-25"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1969-10-25"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-          time:inXSDDate "1996-04-23"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1996-04-23"^^xsd:date ;
       ] ;
     ] ;
   ] ,
@@ -78,16 +74,12 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
     time:hasTime [
       a time:ProperInterval ;
-      time:hasBeginning [
-        time:inTimePosition [
+        time:hasBeginning [
           time:inXSDDate "1974-09-24"^^xsd:date ;
         ] ;
-      ] ;
-      time:hasEnd [
-        time:inTimePosition [
+        time:hasEnd [
           time:inXSDDate "1975-09-30"^^xsd:date ;
         ] ;
-      ] ;
     ] ;
   ] ,
   [
@@ -100,16 +92,12 @@ Since leaving federal politics, Keating has held various appointments, including
     ] ;
     time:hasTime [
      a time:ProperInterval ;
-     time:hasBeginning [
-       time:inTimePosition [
-         time:inXSDDate "1975-09-30"^^xsd:date ;
-       ] ;
-     ] ;
-     time:hasEnd [
-       time:inTimePosition [
-         time:inXSDDate "1983-02-04"^^xsd:date ;
-       ] ;
-     ] ;
+      time:hasBeginning [
+        time:inXSDDate "1975-09-30"^^xsd:date ;
+      ] ;
+      time:hasEnd [
+        time:inXSDDate "1983-02-04"^^xsd:date ;
+      ] ;
     ] ;
   ] ,
   [
@@ -123,14 +111,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1975-10-21"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1975-10-21"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-          time:inXSDDate "1975-11-11"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1975-11-11"^^xsd:date ;
       ] ;
     ] ;
   ] ,
@@ -145,14 +129,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1976-03-18"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1976-03-18"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-          time:inXSDDate "1983-02-04"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1983-02-04"^^xsd:date ;
       ] ;
     ] ;
   ] ,
@@ -167,14 +147,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1983-03-11"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1983-03-11"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-         time:inXSDDate "1991-06-03"^^xsd:date ;
-       ] ;
+        time:inXSDDate "1991-06-03"^^xsd:date ;
      ] ;
    ] ;
   ] ,
@@ -193,14 +169,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1990-04-04"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1990-04-04"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-          time:inXSDDate "1991-06-03"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1991-06-03"^^xsd:date ;
       ] ;
     ] ;
   ] ,
@@ -215,14 +187,10 @@ Since leaving federal politics, Keating has held various appointments, including
     time:hasTime [
       a time:ProperInterval ;
       time:hasBeginning [
-        time:inTimePosition [
-          time:inXSDDate "1991-12-20"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1991-12-20"^^xsd:date ;
       ] ;
       time:hasEnd [
-        time:inTimePosition [
-          time:inXSDDate "1996-03-11"^^xsd:date ;
-        ] ;
+        time:inXSDDate "1996-03-11"^^xsd:date ;
       ] ;
     ] ;
   ] .
