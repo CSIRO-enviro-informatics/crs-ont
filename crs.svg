@@ -444,12 +444,12 @@
 		</g>
 		<g id="shape286-103" v:mID="286" v:groupContext="shape" transform="translate(478.346,-317.598)">
 			<title>Sheet.286</title>
-			<desc>linked to related agent</desc>
+			<desc>linked to related organisation</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
-			<v:textRect cx="37.5591" cy="519.768" width="75.12" height="9.28343"/>
-			<rect x="0" y="515.126" width="75.1181" height="9.28343" class="st13"/>
+			<v:textRect cx="48.189" cy="519.768" width="96.38" height="9.28343"/>
+			<rect x="0" y="515.126" width="96.378" height="9.28343" class="st13"/>
 			<text x="4" y="516.77" class="st2" v:langID="1045"><v:paragraph/><v:tabList/>linked to<v:lf/><tspan x="4" dy="1.2em"
-						class="st11">related agent</tspan></text>		</g>
+						class="st11">related organisation</tspan></text>		</g>
 		<g id="shape289-107" v:mID="289" v:groupContext="shape" transform="translate(429.449,-373.819)">
 			<title>Rounded Rectangle.289</title>
 			<desc>org:Membership</desc>
