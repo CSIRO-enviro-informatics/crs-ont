@@ -26,10 +26,10 @@ Data from the CRS system, modelled according to this CRC ontology is given in th
 
 * **Commonwealth Person** - Paul Keating:
   * CRS record CP 665
-  * RDF file: [CP665.ttl](CP665.ttl)
+  * RDF file: [CP665.ttl](data/CP665.ttl)
 * **Agency** - Department of Northern Australia, Central Office:
   * CRS record CA 1889
-  * RDF file: [CA1889.ttl](CA1889.ttl)
+  * RDF file: [CA1889.ttl](data/CA1889.ttl)
 
 *NOTE: these examples are currently incomplete*
 
