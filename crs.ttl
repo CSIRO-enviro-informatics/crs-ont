@@ -13,11 +13,11 @@
                                                                                         "Marco Wallenius" ,
                                                                                         "Simon J.D. Cox" ;
                                           <http://purl.org/dc/elements/1.1/creator> "Nicholas J. Car" ;
-                                          <http://purl.org/dc/elements/1.1/publisher> "CSIRO" ;
+                                          <http://purl.org/dc/elements/1.1/publisher> "National Archives of Australia" ;
                                           <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-3884-3420> ;
                                           <http://purl.org/dc/terms/created> "2018-09-10"^^xsd:date ;
                                           <http://purl.org/dc/terms/modified> "2018-11-14"^^xsd:date ;
-                                          <http://purl.org/dc/terms/publisher> <http://www.csiro.au> ;
+                                          <http://purl.org/dc/terms/publisher> <http://catalogue.linked.data.gov.au/org/O-000790> ;
                                           rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
 This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/).
