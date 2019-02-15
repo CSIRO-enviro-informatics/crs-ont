@@ -1,5 +1,6 @@
-@prefix : <http://test.linked.data.gov.au/def/crs#> .
+# baseURI: http://linked.data.gov.au/def/crs/function
 
+@prefix : <http://linked.data.gov.au/def/crs/function/> .
 
 :Agriculture a :Function .
 :ExportsAndImports a :Function .

@@ -1,6 +1,8 @@
+# baseURI: http://test.linked.data.gov.au/def/crs/CommonwealthPerson
 # TODO: correlate the role changes at 1975-09-30 with a named change event (Epoch)
 
-@prefix : <http://test.linked.data.gov.au/def/crs#> .
+@prefix : <http://linked.data.gov.au/def/crs#> .
+@prefix cp: <http://test.linked.data.gov.au/def/crs/CommonwealthPerson/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,10 +13,10 @@
 @prefix schema: <https://schema.org/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@base <http://test.linked.data.gov.au/def/crs> .
+@base <http://linked.data.gov.au/def/crs> .
 
 
-<http://test.linked.data.gov.au/dataset/crs/CommonwealthPerson/CP665> a owl:NamedIndividual ;
+<http://linked.data.gov.au/dataset/crs/CommonwealthPerson/CP665> a owl:NamedIndividual ;
   dct:title "Hon Paul Keating" ;
   foaf:familyName "Keating" ;
   foaf:givenName "Paul John" ;

@@ -1,3 +1,4 @@
+# baseURI: http://test.linked.data.gov.au/def/crs/CA1889
 # TODO :hasLocation <http://test.linked.data.gov.au/dataset/asgs/state/ACT> , <http://test.linked.data.gov.au/dataset/asgs/state/NT> ;
 # TODO :agencyStatus :DeaptmentOfState ;
 
