@@ -1,5 +1,7 @@
 # baseURI: http://linked.data.gov.au/def/crs
 # imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.w3.org/2006/time
+# imports: http://www.w3.org/ns/org#
 # prefix: crs
 
 @prefix agrif: <http://linked.data.gov.au/def/agrif#> .
@@ -37,6 +39,8 @@ It also refers to components in other Australian government ontologies, particul
   rdfs:label "Commonwealth Record Series Ontology" ;
   rdfs:seeAlso "The GitHub repository containing addition documentation: http://github.com/CSIRO-enviro-informatics/crs-ont/" ;
   owl:imports dc: ;
+  owl:imports <http://www.w3.org/2006/time> ;
+  owl:imports org: ;
   owl:versionIRI crs: ;
   owl:versionInfo "Beta version" ;
 .
@@ -48,9 +52,17 @@ crs:AdministrativeArrangementOrder
 .
 crs:Affiliation
   a owl:Class ;
-  rdfs:comment "Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role, for example John Howard was Associated with the House of Representatitves where he played the Role of Member of Parliament (among others). Associations may be temporal, for example John Howard was Associated with the Department of Prime Minister & Cabinet where he played the Role of Prime Minister from 1996-2007."@en ;
+  rdfs:comment """Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role. 
+
+For example John Howard was Associated with the House of Representatitves where he played the Role of Member of Parliament (among others). 
+Associations may be temporal, for example John Howard was Associated with the Department of Prime Minister & Cabinet where he played the Role of Prime Minister from 1996-2007."""@en ;
   rdfs:label "Affiliation" ;
   rdfs:subClassOf crs:Relationship ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger ;
+      owl:onProperty crs:hasAgent ;
+    ] ;
 .
 crs:Agent
   a owl:Class ;
@@ -202,7 +214,7 @@ crs:PrimeMinister
 .
 crs:Relationship
   a owl:Class ;
-  rdfs:comment "Relationships are general associations between entities, agents and activities that allow a role, timing and other properties to be attached to the relationship."@en ;
+  rdfs:comment "Relationships are general associations between entities, agents and activities that allow a role, timing and other properties to be attached to a relationship."@en ;
   rdfs:label "Relationship" ;
 .
 crs:Role
@@ -210,6 +222,7 @@ crs:Role
   rdfs:comment "The role played by one CRS Agent when associated with another via an Assotiation"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Role" ;
+  rdfs:subClassOf skos:Concept ;
 .
 crs:Series
   a owl:Class ;
@@ -276,6 +289,14 @@ crs:creator
   rdfs:range crs:Agent ;
   rdfs:subPropertyOf dct:creator ;
 .
+crs:forFunction
+  a owl:ObjectProperty ;
+  rdfs:domain crs:Relationship ;
+  rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
+  rdfs:label "for Function" ;
+  rdfs:range crs:Function ;
+  rdfs:subPropertyOf dct:relation ;
+.
 crs:hasAgent
   a owl:ObjectProperty ;
   rdfs:comment "Whan an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2"@en ;
@@ -283,6 +304,7 @@ crs:hasAgent
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "has agent" ;
   rdfs:range crs:Agent ;
+  rdfs:subPropertyOf dct:relation ;
 .
 crs:hasPart
   a owl:ObjectProperty ;
@@ -306,7 +328,15 @@ crs:isPartOf
 .
 crs:isPerformedBy
   a owl:ObjectProperty ;
+  rdfs:domain crs:Function ;
   rdfs:label "is performed by" ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          crs:CommonwealthAgency
+          crs:Relationship
+        ) ;
+    ] ;
 .
 crs:mandatedBy
   a owl:ObjectProperty ;
@@ -320,7 +350,13 @@ crs:performs
   rdfs:domain crs:CommonwealthAgency ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "performs" ;
-  rdfs:range crs:Function ;
+  rdfs:range [
+      a owl:Class ;
+      owl:unionOf (
+          crs:Function
+          crs:Relationship
+        ) ;
+    ] ;
   owl:inverseOf crs:isPerformedBy ;
 .
 crs:previousAgency
@@ -333,6 +369,13 @@ crs:previousAgency
       org:resultedFrom
       org:originalOrganization
     ) ;
+.
+crs:relatedDuring
+  a owl:ObjectProperty ;
+  rdfs:domain crs:Relationship ;
+  rdfs:label "related during" ;
+  rdfs:range <http://www.w3.org/2006/time#Interval> ;
+  rdfs:subPropertyOf dct:temporal ;
 .
 crs:relatedTo
   a owl:ObjectProperty ;
@@ -434,7 +477,7 @@ org:memberDuring
   rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
   rdfs:label "member during" ;
   rdfs:range <http://www.w3.org/2006/time#Interval> ;
-  rdfs:subPropertyOf crs:affiliatedWith ;
+  rdfs:subPropertyOf dct:temporal ;
 .
 org:memberOf
   a owl:ObjectProperty ;

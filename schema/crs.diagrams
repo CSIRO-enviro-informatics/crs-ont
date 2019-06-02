@@ -9,30 +9,82 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >92</cd:height>
+        >192</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >200</cd:width>
+        >463</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >104</cd:y>
+        >303</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >493</cd:x>
+        >37</cd:x>
+        <cd:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>crs:Relationship Diagram</rdfs:label>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >72</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >338</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >51</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >929</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Agent"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
+        >112</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >109</cd:width>
+        >251</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >494</cd:y>
+        >137</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >808</cd:x>
+        >504</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Relationship"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >52</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >205</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >382</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >598</cd:x>
+        <cd:class rdf:resource="http://www.w3.org/2006/time#Interval"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >92</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >339</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >235</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >855</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthAgency"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >52</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >472</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >37</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >73</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Function"/>
       </cd:URINode>
     </cd:nodes>
-    <rdfs:label>Agent Diagram</rdfs:label>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -40,12 +92,16 @@
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >114</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >472</cd:y>
+        >233</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >949</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Authority"/>
+        >240</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Role"/>
       </cd:URINode>
     </cd:nodes>
+    <cd:selectedResource rdf:resource="http://linked.data.gov.au/def/crs#Relationship"/>
+  </cd:Diagram>
+  <cd:Diagram>
+    <rdfs:label>Agent Diagram</rdfs:label>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
@@ -64,45 +120,6 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >40</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >92</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >510</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >688</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Series"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >83</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >42</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >862</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Role"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >52</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >217</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >353</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >630</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthAgency"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >202</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >507</cd:y>
@@ -111,57 +128,18 @@
         <cd:class rdf:resource="http://linked.data.gov.au/def/crs#DeputyPrimeMinister"/>
       </cd:URINode>
     </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >116</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >297</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >242</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Minister"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >214</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >297</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >390</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#ParliamentarySecretary"/>
-      </cd:URINode>
-    </cd:nodes>
-    <cd:nodes>
-      <cd:URINode>
-        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
-        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >146</cd:width>
-        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >243</cd:y>
-        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >937</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Membership"/>
-      </cd:URINode>
-    </cd:nodes>
     <cd:selectedResource rdf:resource="http://linked.data.gov.au/def/crs#Agent"/>
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >40</cd:height>
+        >72</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >253</cd:width>
+        >158</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >226</cd:y>
+        >148</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >611</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthOrganisation"/>
+        >931</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Association"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -182,6 +160,19 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >40</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >214</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >297</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >390</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#ParliamentarySecretary"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >211</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >222</cd:y>
@@ -193,14 +184,66 @@
     <cd:nodes>
       <cd:URINode>
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >72</cd:height>
+        >40</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >158</cd:width>
+        >116</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >148</cd:y>
+        >297</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
-        >931</cd:x>
-        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Association"/>
+        >242</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Minister"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >146</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >243</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >937</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Membership"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >52</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >217</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >353</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >630</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthAgency"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >114</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >472</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >949</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Authority"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >92</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >200</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >104</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >493</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Agent"/>
       </cd:URINode>
     </cd:nodes>
     <cd:nodes>
@@ -221,12 +264,159 @@
         <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >40</cd:height>
         <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >253</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >226</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >611</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthOrganisation"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >83</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >42</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >862</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Role"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >109</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >494</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >808</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Function"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >154</cd:width>
         <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >507</cd:y>
         <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
         >327</cd:x>
         <cd:class rdf:resource="http://linked.data.gov.au/def/crs#PrimeMinister"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >92</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >510</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >688</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Series"/>
+      </cd:URINode>
+    </cd:nodes>
+  </cd:Diagram>
+  <cd:Diagram>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >112</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >251</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >137</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >504</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Relationship"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >52</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >205</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >382</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >598</cd:x>
+        <cd:class rdf:resource="http://www.w3.org/2006/time#Interval"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >192</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >463</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >303</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >37</cd:x>
+        <cd:class rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >52</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >472</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >37</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >73</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Function"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >92</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >339</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >235</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >855</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#CommonwealthAgency"/>
+      </cd:URINode>
+    </cd:nodes>
+    <rdfs:label>crs:Relationship Diagram_1</rdfs:label>
+    <cd:selectedResource rdf:resource="http://linked.data.gov.au/def/crs#Relationship"/>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >72</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >338</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >51</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >929</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Agent"/>
+      </cd:URINode>
+    </cd:nodes>
+    <cd:nodes>
+      <cd:URINode>
+        <cd:height rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >40</cd:height>
+        <cd:width rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >114</cd:width>
+        <cd:y rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >233</cd:y>
+        <cd:x rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >240</cd:x>
+        <cd:class rdf:resource="http://linked.data.gov.au/def/crs#Role"/>
       </cd:URINode>
     </cd:nodes>
   </cd:Diagram>

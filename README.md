@@ -21,8 +21,10 @@ An indirect link, via an association-object from the class `crs:Relationship`, a
 
 ![](images/relationship.png)
 
-Note that a `crs:Relationship` can be pertain any set of entities. 
+Note that a `crs:Relationship` can pertain to any set of entities. 
 One specialization is defined: `crs:Affiliation` which is between agents or parties. 
+
+![](images/affiliation.png)
 
 The complete set of CRS ontology classes and their main relations and associations to other ontology's classes is shown in Figure 3.
 
