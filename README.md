@@ -5,19 +5,28 @@ This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonw
 ## The CRS System
 The CRS system is described at the [National Archives of Australia's Records Search](https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/AdvSearchMain.aspx) website. The diagram of the CRS structure is given in Figure 1.
 
-![](crs-naa.png)  
+![](images/crs-naa.png)  
 **Figure 1**: The interactive diagram of the CRS from the [NAA website's Advanced Records Search](https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/AdvSearchMain.aspx), rendered here as a static image (not interactive).
 
 This ontology's interpretation of the CRS system, represented in a manner similar to that of Figure 1 for visual comparison, is given in Figure 2.
 
-![](crs-pyramid.svg)  
+![](images/crs-pyramid.svg)  
 **Figure 2**: The main classes of this ontology echoing the layout of the CRS interactive diagram reproduced in Figure 1.
 
-This ontology goes beyond the publicly available information on the CRS system and includes a couple of extra classes (such as `Association`) and also relates its classes to classes in well-known ontologies, for example, the CRS `Commonwealth Person` class is described as being a `sub class of` the [FOAF Vocabulary](http://xmlns.com/foaf/spec/)'s `Person` class.
+This ontology goes beyond the publicly available information on the CRS system and includes a couple of extra classes (such as `Relationship`) and also relates its classes to classes in well-known ontologies, for example, the CRS `Commonwealth Person` class is described as being a `sub class of` the [FOAF Vocabulary](http://xmlns.com/foaf/spec/)'s `Person` class.
+
+The link between a **Function** and an **Agency** is important, as this refers to both responsibility and funding. 
+Direct links `crs:isPerformedBy` and its inverse `crs:performs` capture the instantantaneous state, or snapshot. 
+An indirect link, via an association-object from the class `crs:Relationship`, allows more information to be captured, such as the specific role of the agent, and in particular the time period during which the relationship applies, as shown in this figure:
+
+![](images/relationship.png)
+
+Note that a `crs:Relationship` can be pertain any set of entities. 
+One specialization is defined: `crs:Affiliation` which is between agents or parties. 
 
 The complete set of CRS ontology classes and their main relations and associations to other ontology's classes is shown in Figure 3.
 
-![](crs.svg)  
+![](images/crs.svg)  
 **Figure 3**: The complete class diagram of this CRS Ontology
 
 
