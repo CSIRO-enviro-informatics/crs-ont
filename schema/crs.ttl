@@ -13,24 +13,43 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
+@prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time> .
+@prefix agift: <http://linked.data.gov.au/def/agift#> .
 
 <http://linked.data.gov.au/def/crs>
   a owl:NamedIndividual ;
   a owl:Ontology ;
   dc:contributor "David Hearder" ;
   dc:contributor "Marco Wallenius" ;
-  dc:contributor "Simon J.D. Cox" ;
-  dc:creator "Nicholas J. Car" ;
-  dc:publisher "National Archives of Australia" ;
-  dct:contributor <https://orcid.org/0000-0002-3884-3420> ;
+  dct:publisher [
+    sdo:name "National Archives of Australia" ;
+    sdo:identifier <http://catalogue.linked.data.gov.au/org/naa> ;
+    rdfs:seeOther <http://www.naa.gov.au> ;
+  ] ;
+  dct:contributor [
+    sdo:name "Simon J.D. Cox" ;
+    sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
+    sdo:email <simon.cox@csiro.au> ;
+    sdo:memberOf [
+      sdo:name "CSIRO" ;
+      sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
+    ] ;
+  ] ;
   dct:created "2018-09-10"^^xsd:date ;
-  dct:creator <http://orcid.org/0000-0002-8742-7730> ;
+  dct:creator [
+    sdo:name "Nicholas J. Car" ;
+    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+    sdo:email <nicholas.car@csiro.au> ;
+    sdo:memberOf [
+      sdo:name "CSIRO" ;
+      sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
+    ] ;
+  ] ;
   dct:modified "2019-05-31"^^xsd:date ;
-  dct:publisher <http://catalogue.linked.data.gov.au/org/naa> ;
   rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) system's data model that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
 This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/) to describe CRS things in specific terms but also in relation to well-known generic terms.
@@ -38,9 +57,7 @@ This ontology specialises classes and properties from the [Organization Ontology
 It also refers to components in other Australian government ontologies, particularly [AGRIF](http://reference.data.gov.au/def/ont/agrif) - Australian government Functions & Records"""@en ;
   rdfs:label "Commonwealth Record Series Ontology" ;
   rdfs:seeAlso "The GitHub repository containing addition documentation: http://github.com/CSIRO-enviro-informatics/crs-ont/" ;
-  owl:imports dc: ;
-  owl:imports <http://www.w3.org/2006/time> ;
-  owl:imports org: ;
+  owl:imports dc: , time: , org: ;
   owl:versionIRI crs: ;
   owl:versionInfo "Beta version" ;
 .
@@ -52,9 +69,9 @@ crs:AdministrativeArrangementOrder
 .
 crs:Affiliation
   a owl:Class ;
-  rdfs:comment """Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role. 
+  rdfs:comment """Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role.
 
-For example John Howard was Associated with the House of Representatitves where he played the Role of Member of Parliament (among others). 
+For example John Howard was Associated with the House of Representatitves where he played the Role of Member of Parliament (among others).
 Associations may be temporal, for example John Howard was Associated with the Department of Prime Minister & Cabinet where he played the Role of Prime Minister from 1996-2007."""@en ;
   rdfs:label "Affiliation" ;
   rdfs:subClassOf crs:Relationship ;
@@ -135,7 +152,7 @@ crs:CommonwealthPerson
   rdfs:comment "Depositors of personal records collections. These persons have had a close association with the Commonwealth, such as Prime Ministers, senior public servants and the Governors-General. The Archives registers persons with a CP (Commonwealth Persons) number"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Commonwealth Person" ;
-  rdfs:subClassOf schema:Person ;
+  rdfs:subClassOf sdo:Person ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
@@ -155,7 +172,9 @@ crs:Function
   rdfs:comment "A major function normally undertaken by an agency in its operations" ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Government Function" ;
-  rdfs:subClassOf [
+  rdfs:subClassOf
+    agift:Function ,
+    [
       a owl:Restriction ;
       owl:allValuesFrom [
           a owl:Class ;
@@ -229,7 +248,9 @@ crs:Series
   rdfs:comment "A group of records created or accumulated by the same agency or person. A series can be a single item or many items. The Archives identifies series with a series number"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Series" ;
-  rdfs:subClassOf [
+  rdfs:subClassOf
+    dct:Collection ,
+    [
       a owl:Restriction ;
       owl:allValuesFrom crs:Item ;
       owl:onProperty crs:hasPart ;
@@ -504,7 +525,7 @@ org:subOrganizationOf
 <http://www.w3.org/ns/prov#Agent>
   a owl:Class ;
 .
-schema:Person
+sdo:Person
   a owl:Class ;
   rdfs:subClassOf crs:Agent ;
 .
