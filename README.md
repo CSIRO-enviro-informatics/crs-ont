@@ -2,6 +2,10 @@
 
 This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) that is maintained by the [National Archives of Australia](http://naa.gov.au). It specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) as well as several other ontologies, such as [Dublin Core](http://www.dublincore.org/documents/dcmi-terms/), to ensure that information in this ontology aligns with well-known, general, Semantic Web models.
 
+This ontology is published online at its persistent URI namespace web address:
+
+* **<http://linked.data.gov.au/def/crs>**
+
 ## The CRS System
 The CRS system is described at the [National Archives of Australia's Records Search](https://recordsearch.naa.gov.au/SearchNRetrieve/Interface/SearchScreens/AdvSearchMain.aspx) website. The diagram of the CRS structure, as it is given within the Records Search, is reproduced here in Figure 1.
 
