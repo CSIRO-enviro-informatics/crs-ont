@@ -49,7 +49,6 @@
     <div id="description">
         <p>This ontology is an <a href="https://www.w3.org/OWL/">OWL</a> interpretation of the Commonwealth Record Series (CRS) system's data model that is maintained by the <a href="http://naa.gov.au">National Archives of Australia</a>.</p>
 <p>This ontology specialises classes and properties from the <a href="https://www.w3.org/TR/vocab-org/">Organization Ontology</a> and other well-known ontologies such as <a href="http://dublincore.org/schemas/rdfs/">Dublin Core</a> &amp; <a href="https://www.w3.org/TR/prov-o/">PROV</a> to describe CRS things in specific terms but also in relation to well-known generic terms.</p>
-<p>It also refers to components in other Australian government ontologies, particularly <a href="http://reference.data.gov.au/def/ont/agrif">AGRIF</a> - Australian government Functions &amp; Records</p>
     </div>
 </section>
 <section id="toc">
@@ -341,12 +340,6 @@ Associations may be temporal, for example John Howard was Associated with the De
                 </td>
             </tr>
             <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://linked.data.gov.au/def/agrif#Function">agrif:Function</a> <sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
                 <th>Restrictions</th>
                 <td>
                     <a href="#isperformedby">crs:isPerformedBy</a> <sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> (<a href="#commonwealthagency">crs:CommonwealthAgency</a> <sup class="sup-c" title="class">c</sup> or <a href="#relationship">crs:Relationship</a> <sup class="sup-c" title="class">c</sup>)<br/>
@@ -379,12 +372,6 @@ Associations may be temporal, for example John Howard was Associated with the De
                     Individual records in any format, such as files, volumes, maps, photographs or sound recordings. Items are identified by the number or symbol that the agency used when it created the item.
 
 Items in the CRS are AGIFT Records.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="http://linked.data.gov.au/def/agrif#Record">agrif:Record</a> <sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1302,8 +1289,6 @@ Items in the CRS are AGIFT Records.
     <dl>
         <dt><em>default (:)</em></dt>
         <dd><code>http://linked.data.gov.au/def/crs#</code></dd>
-        <dt>agrif</dt>
-        <dd><code>http://linked.data.gov.au/def/agrif#</code></dd>
         <dt>auorg</dt>
         <dd><code>http://linked.data.gov.au/def/auorg/</code></dd>
         <dt>crs</dt>

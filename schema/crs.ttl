@@ -4,7 +4,6 @@
 # imports: http://www.w3.org/ns/org#
 # prefix: crs
 
-@prefix agrif: <http://linked.data.gov.au/def/agrif#> .
 @prefix auorg: <http://linked.data.gov.au/def/auorg/> .
 @prefix crs: <http://linked.data.gov.au/def/crs#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -52,9 +51,7 @@
   dct:modified "2019-05-31"^^xsd:date ;
   rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) system's data model that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
-This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/) to describe CRS things in specific terms but also in relation to well-known generic terms.
-
-It also refers to components in other Australian government ontologies, particularly [AGRIF](http://reference.data.gov.au/def/ont/agrif) - Australian government Functions & Records"""@en ;
+This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/) to describe CRS things in specific terms but also in relation to well-known generic terms."""@en ;
   rdfs:label "Commonwealth Record Series Ontology" ;
   rdfs:seeAlso "The GitHub repository containing addition documentation: http://github.com/CSIRO-enviro-informatics/crs-ont/" ;
   owl:imports dc: , time: , org: ;
@@ -193,7 +190,6 @@ crs:Item
 Items in the CRS are AGIFT Records."""@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Item" ;
-  rdfs:subClassOf agrif:Record ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom crs:Series ;
