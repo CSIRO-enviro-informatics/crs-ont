@@ -39,16 +39,8 @@ The complete set of CRS ontology classes and their main relations to other ontol
 
 
 ## Example Data
-Data from the CRS system, modelled according to this CRC ontology is given in this repository in the [data/](data/) folder. The examples are presented as RDF (turtle format) files:
+Data from the CRS system, modelled according to this CRC ontology is given in the [CRS Dataset - test](https://github.com/CSIRO-enviro-informatics/crs-dataset-test) repository.
 
-* **Commonwealth Person** - Paul Keating:
-  * CRS record CP 665
-  * RDF file: [CP665.ttl](data/CP665.ttl)
-* **Agency** - Department of Northern Australia, Central Office:
-  * CRS record CA 1889
-  * RDF file: [CA1889.ttl](data/CA1889.ttl)
-
-*NOTE: these examples are currently incomplete*
 
 ## License
 This ontology and all other content in this repository are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) (local copy of deed: [LICENSE](LICENSE)).
