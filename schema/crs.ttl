@@ -17,7 +17,6 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix time: <http://www.w3.org/2006/time> .
-@prefix agift: <http://linked.data.gov.au/def/agift#> .
 
 <http://linked.data.gov.au/def/crs>
   a owl:NamedIndividual ;
@@ -38,6 +37,11 @@
       sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
     ] ;
   ] ;
+  dct:contributor [
+    sdo:name "National Archives of Australia" ;
+    sdo:identifier <http://catalogue.linked.data.gov.au/org/naa> ;
+    rdfs:seeOther <http://www.naa.gov.au> ;
+  ] ;
   dct:created "2018-09-10"^^xsd:date ;
   dct:creator [
     sdo:name "Nicholas J. Car" ;
@@ -54,19 +58,20 @@
 This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/) to describe CRS things in specific terms but also in relation to well-known generic terms."""@en ;
   rdfs:label "Commonwealth Record Series Ontology" ;
   rdfs:seeAlso "The GitHub repository containing addition documentation: http://github.com/CSIRO-enviro-informatics/crs-ont/" ;
-  owl:imports dc: , time: , org: ;
+  dct:source "Many of the class definitions used in this ontology were taken directly from the The Commonwealth Record Series (CRS) Manual (https://recordsearch.naa.gov.au/manual/Introduction/CRSIntroduction.htm)."@en ;
+  owl:imports time: , org: ;
   owl:versionIRI crs: ;
   owl:versionInfo "Beta version" ;
 .
 crs:AdministrativeArrangementOrder
   a owl:Class ;
-  rdfs:comment "Administrative Arrangements Orders (AAOs) formally allocate executive responsibility among ministers. They set out which matters and legislation are administered by which department or portfolio. AAOs are re-issued or amended to take into account changes in the structure of government. The information hosted here is for historical purposes only"@en ;
+  skos:definition "Administrative Arrangements Orders (AAOs) formally allocate executive responsibility among ministers. They set out which matters and legislation are administered by which department or portfolio. AAOs are re-issued or amended to take into account changes in the structure of government. The information hosted here is for historical purposes only"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Administrative Arrangement Order" ;
 .
 crs:Affiliation
   a owl:Class ;
-  rdfs:comment """Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role.
+  skos:definition """Affiliations are temporal associations between CRS Agents that indicate both the Agent-Agent relation and a Role.
 
 For example John Howard was Associated with the House of Representatitves where he played the Role of Member of Parliament (among others).
 Associations may be temporal, for example John Howard was Associated with the Department of Prime Minister & Cabinet where he played the Role of Prime Minister from 1996-2007."""@en ;
@@ -98,13 +103,27 @@ crs:AssistantMinister
 .
 crs:Authority
   a owl:Class ;
-  rdfs:comment "An authority or rule that define the functions and activities of a Government Entity"@en ;
+  skos:definition "An authority or rule that define the functions and activities of a Government Entity"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Authority" ;
 .
 crs:CommonwealthAgency
   a owl:Class ;
-  rdf:comment "Government departments, statutory authorities etc. The Archives registers agencies with a CA (Commonwealth Agency) number"@en ;
+  rdf:comment """An agency is a distinct and recognisable body, which has responsibility for carrying out administrative functions.
+
+An agency will usually have:
+
+  an identifiable head with decision-making authority at their hierarchical level;
+  a legal instrument or some form of delegated authority which establishes its basis for existence and sets out its functions; and
+  its own recordkeeping system.
+
+Each agency is identified by a control number, eg
+
+  CA 12,  Prime Minister's Department, 1911-1971
+
+  CA 3167,  Overseas Internees Investigation Board, 1944-1949
+
+  CA 2641,  Royal Commission on Television, 1953-1954"""@en ;
   rdfs:label "Commonwealth Agency" ;
   rdfs:subClassOf crs:Agent ;
   rdfs:subClassOf org:Organization ;
@@ -133,7 +152,17 @@ crs:CommonwealthAgency
 .
 crs:CommonwealthOrganisation
   a owl:Class ;
-  rdfs:comment "A whole government, learned society, church or company. The Archives registers organisations with a CO (Commonwealth Organisation) number"@en ;
+  skos:definition """An organisation is a whole government, learned society, church or company that is independent (or broadly autonomous), for example, the Commonwealth of Australia.
+
+Organisations are a means of representing the high level administrative context of agencies. The business and functions of an organisation are regarded as being exercised through the agencies it controls.
+
+Each organisation is identified by a control number, eg
+
+  CO 1,  Commonwealth of Australia, 1901-
+
+  CO 31,  Colony of Norfolk Island, 1856-1914
+
+  CO 91,  Australian Constitutional Convention, 1973-1983"""@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Commonwealth Organisation" ;
   rdfs:subClassOf crs:Agent ;
@@ -146,7 +175,15 @@ crs:CommonwealthOrganisation
 .
 crs:CommonwealthPerson
   a owl:Class ;
-  rdfs:comment "Depositors of personal records collections. These persons have had a close association with the Commonwealth, such as Prime Ministers, senior public servants and the Governors-General. The Archives registers persons with a CP (Commonwealth Persons) number"@en ;
+  skos:definition """A person is someone who created or accumulated records during their association with the Commonwealth, but whose records were not maintained in the recordkeeping systems of the associated agencies.
+
+A person is usually registered in the CRS System when their personal records are transferred to the Archives.
+
+Each person is identified by a control number, eg
+
+  CP 23,  Rt Hon Viscount Stanley Melbourne BRUCE, PC, CH, MC, 1883-1967
+
+  CP 555,  The Hon James MUIRHEAD, QC, 1925-"""@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Commonwealth Person" ;
   rdfs:subClassOf sdo:Person ;
@@ -159,18 +196,17 @@ crs:CommonwealthPerson
 .
 crs:DeputyPrimeMinister
   a owl:Class ;
-  rdfs:comment "The Deputy Prime Minister of Australia is the second-most senior officer in the Government of Australia. The office of Deputy Prime Minister was officially created as a ministerial portfolio in 1968, although the title had been used informally for many years previously. The Deputy Prime Minister is appointed by the Governor-General on the advice of the Prime Minister"@en ;
+  skos:definition "The Deputy Prime Minister of Australia is the second-most senior officer in the Government of Australia. The office of Deputy Prime Minister was officially created as a ministerial portfolio in 1968, although the title had been used informally for many years previously. The Deputy Prime Minister is appointed by the Governor-General on the advice of the Prime Minister"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Deputy Prime Minister" ;
   rdfs:subClassOf crs:MinisterOfState ;
 .
 crs:Function
   a owl:Class ;
-  rdfs:comment "A major function normally undertaken by an agency in its operations" ;
+  skos:definition "A major function normally undertaken by an agency in its operations" ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Government Function" ;
   rdfs:subClassOf
-    agift:Function ,
     [
       a owl:Restriction ;
       owl:allValuesFrom [
@@ -185,9 +221,25 @@ crs:Function
 .
 crs:Item
   a owl:Class ;
-  rdfs:comment """Individual records in any format, such as files, volumes, maps, photographs or sound recordings. Items are identified by the number or symbol that the agency used when it created the item.
+  skos:definition """An item is a discrete recordkeeping unit within a series.
 
-Items in the CRS are AGIFT Records."""@en ;
+Generally, an item will consist of a document, eg a letter, memorandum, report, image or sound recording, or a group of documents, eg a file, that is treated as a unit for control and retrieval.
+
+Each item is identified by its original control symbol or number or, if necessary, one imposed by the Archives:
+
+  Bundle 606,  HMAS Voyager, 1938-1938
+
+  5/1/2,  Control of Aliens in Australia, 1940-1942
+
+  1938/4661,  Majura School, 1922-1938
+
+  G323/1/5,  Trade with Siam, 1937-1949
+
+An item may also have portions of itself that are described separately, for example a map attached to a correspondence file. The control symbol remains the same, but the format may vary and its physical location may vary.
+
+An item may be stored and retrieved in an electronic recordkeeping system, but will still have the descriptive attributes of items that exist in a hard-copy form.
+
+An item can have several different control symbols over time and may be part of one or more series over time.  However, at any specific time, an item may only have one control symbol and be a member of only one series."""@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Item" ;
   rdfs:subClassOf [
@@ -222,26 +274,45 @@ crs:ParliamentarySecretary
 .
 crs:PrimeMinister
   a owl:Class ;
-  rdfs:comment "The Prime Minister of Australia is the head of government of Australia. The individual who holds the office is the most senior Minister of State, the leader of the Federal Cabinet. The Prime Minister also has the responsibility of administering the Department of the Prime Minister and Cabinet, and is the chair of the National Security Committee and the Council of Australian Governments"@en ;
+  skos:definition "The Prime Minister of Australia is the head of government of Australia. The individual who holds the office is the most senior Minister of State, the leader of the Federal Cabinet. The Prime Minister also has the responsibility of administering the Department of the Prime Minister and Cabinet, and is the chair of the National Security Committee and the Council of Australian Governments"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Prime Minister" ;
   rdfs:subClassOf crs:MinisterOfState ;
 .
 crs:Relationship
   a owl:Class ;
-  rdfs:comment "Relationships are general associations between entities, agents and activities that allow a role, timing and other properties to be attached to a relationship."@en ;
+  skos:definition "Relationships are general associations between entities, agents and activities that allow a role, timing and other properties to be attached to a relationship."@en ;
   rdfs:label "Relationship" ;
 .
 crs:Role
   a owl:Class ;
-  rdfs:comment "The role played by one CRS Agent when associated with another via an Assotiation"@en ;
+  skos:definition "The role played by one CRS Agent when associated with another via an Assotiation"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Role" ;
   rdfs:subClassOf skos:Concept ;
 .
 crs:Series
   a owl:Class ;
-  rdfs:comment "A group of records created or accumulated by the same agency or person. A series can be a single item or many items. The Archives identifies series with a series number"@en ;
+  skos:definition """A series is a group of records created or maintained by an agency or person that, regardless of currency, value or present custody:
+
+  * are in the same numerical, alphabetical, chronological or other identifiable sequence; or
+  * result from the same accumulation or filing process and are of similar function, format or informational content.
+
+Similarity of format is secondary to the accumulation process, as the same accumulation or system of arrangement and control can produce unique electronic and paper-based records.
+
+For control system purposes, a series may consist of a single item, eg a diary, register or file, if it is one of a kind.
+
+Each series is identified by a control number, eg
+
+  A461, Correspondence files, multiple number series (third system), 1934-1950
+
+  A29, Copies of speeches made by the Governor-General to Parliament, 1902-1917
+
+  AWM31, Troopship passenger lists, 1915-1920
+
+  J164, Quarantine roster, 1920-1937
+
+The term `series' is also used loosely within the Archives to refer to collective units of description brought together under fundamentally different arrangement and control criteria, eg former Accession System series and unserialised accessions. The type of `series' under consideration can be distinguished by the types of archival control numbers, codes and descriptive information present. These distinctions and their underlying meanings will not be readily apparent to agency staff, public users and others who are unfamiliar with the Archives' control systems."""@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "Series" ;
   rdfs:subClassOf
@@ -316,7 +387,7 @@ crs:forFunction
 .
 crs:hasAgent
   a owl:ObjectProperty ;
-  rdfs:comment "Whan an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2"@en ;
+  rdfs:comment "When an Association object indicates an association between two Agents, this property is used to indicate the Agent the assocition is to, e.g. Agent_1 -> associatedWith -> Association_X, Association_X -> hasAgent -> Agent_2"@en ;
   rdfs:domain crs:Relationship ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "has agent" ;
@@ -396,6 +467,7 @@ crs:relatedDuring
 .
 crs:relatedTo
   a owl:ObjectProperty ;
+  rdfs:subPropertyOf dct:relation ;
   rdfs:comment "An Entity is related to another Entity"@en ;
   rdfs:isDefinedBy <http://linked.data.gov.au/def/crs> ;
   rdfs:label "related to" ;
