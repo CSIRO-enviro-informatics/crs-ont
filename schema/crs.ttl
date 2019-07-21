@@ -31,7 +31,7 @@
   dct:contributor [
     sdo:name "Simon J.D. Cox" ;
     sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
-    sdo:email <simon.cox@csiro.au> ;
+    sdo:email <mailto:simon.cox@csiro.au> ;
     sdo:memberOf [
       sdo:name "CSIRO" ;
       sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
@@ -46,7 +46,7 @@
   dct:creator [
     sdo:name "Nicholas J. Car" ;
     sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-    sdo:email <nicholas.car@csiro.au> ;
+    sdo:email <mailto:nicholas.car@csiro.au> ;
     sdo:memberOf [
       sdo:name "CSIRO" ;
       sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
