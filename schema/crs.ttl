@@ -21,8 +21,6 @@
 <http://linked.data.gov.au/def/crs>
   a owl:NamedIndividual ;
   a owl:Ontology ;
-  dc:contributor "David Hearder" ;
-  dc:contributor "Marco Wallenius" ;
   dct:publisher [
     sdo:name "National Archives of Australia" ;
     sdo:identifier <http://catalogue.linked.data.gov.au/org/naa> ;
@@ -38,8 +36,9 @@
     ] ;
   ] ;
   dct:contributor [
-    sdo:name "National Archives of Australia" ;
+    sdo:name "Staff of the National Archives of Australia, Information Governance Section" ;
     sdo:identifier <http://catalogue.linked.data.gov.au/org/naa> ;
+    sdo:email <mailto:information.governance@naa.gov.au> ;
     rdfs:seeOther <http://www.naa.gov.au> ;
   ] ;
   dct:created "2018-09-10"^^xsd:date ;
@@ -52,7 +51,7 @@
       sdo:identifier <http://catalogue.linked.data.gov.au/org/csiro> ;
     ] ;
   ] ;
-  dct:modified "2019-05-31"^^xsd:date ;
+  dct:modified "2019-08-15"^^xsd:date ;
   rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) system's data model that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
 This ontology specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) and other well-known ontologies such as [Dublin Core](http://dublincore.org/schemas/rdfs/) & [PROV](https://www.w3.org/TR/prov-o/) to describe CRS things in specific terms but also in relation to well-known generic terms."""@en ;

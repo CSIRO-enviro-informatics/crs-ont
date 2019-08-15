@@ -47,6 +47,10 @@ This ontology and all other content in this repository are licensed under the [C
 
 
 ## Contacts
+Publisher:  
+**National Archives of Australia**  
+<http://www.naa.gov.au>  
+
 Creator:  
 **Nicholas Car**  
 *Senior Experimental Scientist*  
@@ -54,13 +58,11 @@ CSIRO Land & Water, Brisbane, Australia
 <nicholas.car@csiro.au>  
 <http://orcid.org/0000-0002-8742-7730>  
 
-Contributors:
-
-**David Hearder**  
-*a/g Assistant Director*  
-Commonwealth Information Policy  
-Collection Management  
+Contributors:  
+**Staff of the National Archives of Australia**  
+*Information Governance Section*  
 National Archives of Australia  
+<information.governance@naa.gov.au>  
 
 **Simon Cox**  
 *Research Scientist*  
