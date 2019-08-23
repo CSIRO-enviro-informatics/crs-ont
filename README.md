@@ -1,8 +1,8 @@
-# Commonwealth Record Series system ontology
+# Commonwealth Record Series ontology
 
-This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) that is maintained by the [National Archives of Australia](http://naa.gov.au). It specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) as well as several other ontologies, such as [Dublin Core](http://www.dublincore.org/documents/dcmi-terms/), to ensure that information in this ontology aligns with well-known, general, Semantic Web models.
+This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the structure of the Commonwealth Record Series (CRS) database that is maintained by the [National Archives of Australia](http://naa.gov.au). It specialises classes and properties from the [Organization Ontology](https://www.w3.org/TR/vocab-org/) as well as several other ontologies, such as [Dublin Core](http://www.dublincore.org/documents/dcmi-terms/), to ensure that it aligns with well-known, general, Semantic Web models.
 
-This ontology is published online at its persistent URI namespace web address:
+Then normative form of this ontology is published online at its namespace web address which is a persistent Linked Data URI:
 
 * **<http://linked.data.gov.au/def/crs>**
 
@@ -42,14 +42,23 @@ The complete set of CRS ontology classes and their main relations to other ontol
 Data from the CRS system, modelled according to this CRC ontology is given in the [CRS Dataset - test](https://github.com/CSIRO-enviro-informatics/crs-dataset-test) repository.
 
 
-## License
-This ontology and all other content in this repository are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) (local copy of deed: [LICENSE](LICENSE)).
+## License, Rights & Attribution
+This repository's content is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) (local copy of deed: [LICENSE](LICENSE)). 
+
+Rights for this work are held by the National Archives of Australia and attribution is to be as:
+
+> &copy; Commonwealth of Australia (National Archives of Australia), 2019
 
 
 ## Contacts
 Publisher:  
 **National Archives of Australia**  
 <http://www.naa.gov.au>  
+
+Custodian:  
+**Information Governance Section**  
+*National Archives of Australia*  
+<information.governance@naa.gov.au>
 
 Creator:  
 **Nicholas Car**  
@@ -59,9 +68,8 @@ CSIRO Land & Water, Brisbane, Australia
 <http://orcid.org/0000-0002-8742-7730>  
 
 Contributors:  
-**Staff of the National Archives of Australia**  
-*Information Governance Section*  
-National Archives of Australia  
+**Information Governance Section**  
+*National Archives of Australia*  
 <information.governance@naa.gov.au>  
 
 **Simon Cox**  
