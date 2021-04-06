@@ -22,12 +22,7 @@
   a owl:NamedIndividual ;
   a owl:Ontology ;
   dct:publisher <https://linked.data.gov.au/org/naa> ;
-  dct:contributor [
-    sdo:name "Simon J.D. Cox" ;
-    sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
-    sdo:email <mailto:simon.cox@csiro.au> ;
-    sdo:affiliation <https://linked.data.gov.au/org/csiro> ;
-  ] ;
+  dct:contributor <https://orcid.org/0000-0002-3884-3420> ;
   dct:contributor [
     a sdo:GovernmentOrganization , sdo:Organization ;
     sdo:name "Information Governance Section, National Archives of Australia" ;
@@ -35,12 +30,7 @@
     sdo:email <mailto:information.governance@naa.gov.au> ;
   ] ;
   dct:created "2018-09-10"^^xsd:date ;
-  dct:creator [
-    sdo:name "Nicholas J. Car" ;
-    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
-    sdo:email <mailto:nicholas.car@surroundaustralia.com> ;
-    sdo:affiliation <https://surroundaustralia.com> 
-  ] ;
+  dct:creator <http://orcid.org/0000-0002-8742-7730> ;
   dct:modified "2020-07-24"^^xsd:date ;
   rdfs:comment """This ontology is an [OWL](https://www.w3.org/OWL/) interpretation of the Commonwealth Record Series (CRS) system's data model that is maintained by the [National Archives of Australia](http://naa.gov.au).
 
@@ -53,6 +43,23 @@ This ontology specialises classes and properties from the [Organization Ontology
   owl:versionInfo "1.0: metadata update only to used best practice Agent descriptions (own nodes with properties)" ;
   dcat:downloadURL <https://raw.githubusercontent.com/CSIRO-enviro-informatics/crs-ont/master/schema/crs.ttl> ;
   sdo:codeRepository <https://github.com/CSIRO-enviro-informatics/crs-ont/> ;
+.
+
+<http://orcid.org/0000-0002-8742-7730>
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car" ;
+    sdo:identifier <http://orcid.org/0000-0002-8742-7730> ;
+    sdo:email "nicholas.car@surroundaustralia.com"^^xsd:anyURI ;
+    sdo:affiliation <https://surroundaustralia.com> ;
+.    
+
+<https://orcid.org/0000-0002-3884-3420>
+    a sdo:Person ;
+    sdo:name "Simon J.D. Cox" ;
+    sdo:identifier <https://orcid.org/0000-0002-3884-3420> ;
+    sdo:email "simon.cox@csiro.au"^^xsd:anyURI ;
+    sdo:affiliation <https://linked.data.gov.au/org/csiro> ;
+    sdo:url "https://people.csiro.au/C/S/Simon-Cox"^^xsd:anyURI ;
 .
 
 <https://linked.data.gov.au/org/naa> 
